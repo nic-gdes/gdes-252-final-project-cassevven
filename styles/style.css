@@ -8,6 +8,7 @@
 .main4 { grid-area: main4;}
 .footer { grid-area: footer;}
 .calc { grid-area: calc;}
+.animated { grid-area: animated;}
 /*default grid container*/
 .grid-container {
     display: grid;
@@ -306,9 +307,10 @@ grid-container-calc {
     grid-template-areas: 
     'header'
     'switch'
+    'animated'
     'calc'
     'footer';
-    }
+}
 
 #calculator-form button {
         display: inline-block;
@@ -318,7 +320,6 @@ grid-container-calc {
         text-decoration: none;
         border: 2px solid #234876; 
 }
-
 
 .calc {
     text-align: left;
@@ -331,6 +332,18 @@ grid-container-calc {
     max-width: 600px;
     margin: 0 auto;
     padding: 70px;
+}
+.animated {
+    display: flex;
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+    transition: transform 0.5s ease; /* Set up a transition for the transform property */
+}
+
+/* Apply the rotation animation on hover */
+.animated:hover {
+    transform: rotate(360deg); /* Rotate the image 360 degrees on hover */
 }
 
 .btns {
@@ -348,6 +361,7 @@ grid-container-calc {
         grid-template-areas:
             'header header header'
             'switch switch switch'
+            'animated animated animated'
             'main main main'
             'main2 main3 main4'
             'footer footer footer';
