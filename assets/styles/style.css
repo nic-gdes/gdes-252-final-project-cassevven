@@ -333,19 +333,6 @@ grid-container-calc {
     margin: 0 auto;
     padding: 70px;
 }
-.animated {
-    display: flex;
-    margin: 0 auto;
-    width: 200px;
-    height: 200px;
-    transition: transform 0.5s ease; /* Set up a transition for the transform property */
-}
-
-/* Apply the rotation animation on hover */
-.animated:hover {
-    transform: rotate(360deg); /* Rotate the image 360 degrees on hover */
-}
-
 .btns {
     display: flex;
     flex-direction: row;
@@ -353,6 +340,67 @@ grid-container-calc {
     justify-content: space-between;
     align-items: center;
 }
+/*index animation*/
+.animated {
+    display: flex;
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+    transition: transform 0.5s ease;
+}
+
+.animated:hover {
+    transform: rotate(360deg); 
+}
+
+/*calculator animation*/
+.color-changing-image {
+    display: flex;
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+    transition: filter 0.5s ease; 
+}
+
+.color-changing-image {
+    animation: colorChange 2s infinite alternate;
+}
+
+@keyframes colorChange {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    25% {
+        filter: hue-rotate(90deg);
+    }
+    50% {
+        filter: hue-rotate(180deg);
+    }
+    75% {
+        filter: hue-rotate(270deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+/*contact animation*/
+.fade-in-out-image {
+    display: flex;
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+    animation: fadeInOut 5s infinite; 
+}
+
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0; 
+    }
+    50% {
+        opacity: 1; 
+    }
+}
+
 /*media query three column grid for wide screen*/
 @media only screen and (min-width: 1920px) {
 
