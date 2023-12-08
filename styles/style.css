@@ -1,3 +1,4 @@
+/*grid container areas*/
 .header { grid-area: header;}
 .switch { grid-area: switch;}
 .main { grid-area: main;}
@@ -7,7 +8,24 @@
 .main4 { grid-area: main4;}
 .footer { grid-area: footer;}
 .calc { grid-area: calc;}
-
+/*default grid container*/
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+    'header'
+    'switch'
+    'main'
+    'main1'
+    'main2'
+    'main3'
+    'main4'
+    'footer';
+    gap: 50px;
+    padding: 25px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+/*main html and font sizes*/
 html {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 18px;
@@ -46,7 +64,7 @@ a:hover {
     background-color: #CCCCCC;
     color: rgb(0, 0, 0);
 }
-
+/*dark mode styling for switch*/
 .dark-mode, a{
     background-color: #333;
     color: #fff;
@@ -108,11 +126,7 @@ input:focus + .slider {
 input:checked + .slider:before {
     transform: translateX(26px);
 }
-
-ul {
-    list-style: none;
-    line-height: 35px;
-}
+/*dropdown navigation icon and hover*/
 .dropdown {
     position: relative;
     display: inline-block;
@@ -149,31 +163,7 @@ ul {
 .dropdown:hover .dropdown-content {
     display: block;
 }
-
-.navFoot {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    gap: 25px;
-}
-
-.grid-container {
-    display: grid;
-    grid-template-areas: 
-    'header'
-    'switch'
-    'main'
-    'main1'
-    'main2'
-    'main3'
-    'main4'
-    'footer';
-    gap: 50px;
-    padding: 25px;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
+/*header image and container*/
 .header {
     display: flex;
     flex-direction: row;
@@ -190,7 +180,7 @@ ul {
 .header img, .footer img {
     width: 250px;
 }
-
+/*main info including the first section in grid*/
 .main {
     display: flex;
     flex-direction: column;
@@ -210,21 +200,13 @@ ul {
     width: 100%;
     display: block;
 }
-
+/*content flex box for main1 main2 main3 and main4*/
 .content {
     padding: 20px;
     position: relative;
     overflow: hidden;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-}
-
-.vertical {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
 }
 
  .main2, .main3, .main4 {
@@ -241,6 +223,26 @@ ul {
     width: 100%;
     display: block;
 }
+/*calc button within main2*/
+.calcIndex {    
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #ddd;
+    border-radius: 15px;
+    overflow: hidden;
+    max-width: 600px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    font-size: 21px;
+    }
+/*footer*/
+.navFoot {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 25px;
+}
 
 .footer {
     display: flex;
@@ -251,6 +253,7 @@ ul {
     gap: 25px;
 }
 
+/*contact page style*/
 .contact {
     background-color: #FFA500;
     padding: 55px;
@@ -267,29 +270,7 @@ hr{
     height: 3px;
     background-color: #234876;
 }
-
-.calcIndex {    
-    display: flex;
-    flex-direction: column;
-    border: 2px solid #ddd;
-    border-radius: 15px;
-    overflow: hidden;
-    max-width: 600px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    font-size: 21px;
-    }
-
-    .grid-container-calc {
-        display: grid;
-        grid-template-areas: 
-        'header'
-        'switch'
-        'calc'
-        'footer';
-    }
-
+/*modal window for contact within main1*/
 #modal {
     display: none;
     position: fixed;
@@ -319,6 +300,15 @@ hr{
     background-color: #CCCCCC;
 color: white;
 }
+/*calculator html with grid form buttons styles container styles */
+grid-container-calc {
+    display: grid;
+    grid-template-areas: 
+    'header'
+    'switch'
+    'calc'
+    'footer';
+    }
 
 #calculator-form button {
         display: inline-block;
@@ -328,6 +318,7 @@ color: white;
         text-decoration: none;
         border: 2px solid #234876; 
 }
+
 
 .calc {
     text-align: left;
@@ -349,32 +340,8 @@ color: white;
     justify-content: space-between;
     align-items: center;
 }
-
-
-       
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media only screen and (min-width: 601px) and (max-width: 1200px) {
-    
-
-}
-
-
+/*media query three column grid for wide screen*/
 @media only screen and (min-width: 1920px) {
-    /* Your styles for large screens go here */
 
     .grid-container {
         grid-template-columns: repeat(3, 1fr); /* Three equal-width columns */
@@ -382,10 +349,9 @@ color: white;
             'header header header'
             'switch switch switch'
             'main main main'
-            'main1 main2 main3'
-            'main4 main4 main4'
+            'main2 main3 main4'
             'footer footer footer';
-        max-width: none; /* Remove the max-width restriction */
-        padding: 0; /* Remove padding or adjust as needed */
+        max-width: 1600px;
+        padding: 0;
     }
 }

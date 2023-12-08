@@ -17,16 +17,9 @@ function closeModal() {
 openModalBtn.addEventListener('click', openModal);
 closeModalBtn.addEventListener('click', closeModal);
 
-// Close the modal if the user clicks outside the modal content
-window.addEventListener('click', (event) => {
-    if (event.target === modal) {
-        closeModal();
-    }
-});
-
-
 //calculator conversion 
 function convert(conversionType) {
+    //collects input value and returns it as a number//
     const inputValue = parseFloat(document.getElementById('inputValue').value);
     const resultField = document.getElementById('result');
 
