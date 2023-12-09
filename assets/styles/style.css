@@ -9,6 +9,9 @@
 .footer { grid-area: footer;}
 .calc { grid-area: calc;}
 .animated { grid-area: animated;}
+.fade-in-out-image { grid-area: fade;}
+.contact { grid-area: contact;}
+
 /*default grid container*/
 .grid-container {
     display: grid;
@@ -255,6 +258,16 @@ input:checked + .slider:before {
 }
 
 /*contact page style*/
+.grid-container-contact {
+    display: grid;
+    grid-template-areas: 
+    'header'
+    'switch'
+    'fade'
+    'contact'
+    'footer';
+}
+
 .contact {
     background-color: #FFA500;
     padding: 55px;
@@ -265,6 +278,11 @@ input:checked + .slider:before {
     overflow: hidden;
     max-width: 600px;
     margin: 0 auto;
+}
+
+ul {
+    list-style: none;
+    line-height: 35px;
 }
 
 hr{
@@ -401,6 +419,7 @@ grid-container-calc {
     }
 }
 
+
 /*media query three column grid for wide screen*/
 @media only screen and (min-width: 1920px) {
 
@@ -417,3 +436,6 @@ grid-container-calc {
         padding: 0;
     }
 }
+
+
+
