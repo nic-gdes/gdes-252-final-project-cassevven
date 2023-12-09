@@ -193,6 +193,11 @@ input:checked + .slider:before {
     overflow: hidden;
 }
 
+.fade-in-out-image, .color-changing-image, .animated {
+    display: flex;
+    margin: 0 auto;
+}
+
 .left {
     position: relative;
     overflow: hidden;
