@@ -42,7 +42,6 @@ function convert(conversionType) {
 const modeSwitch = document.getElementById('modeSwitch');
 
 if (modeSwitch) {
-    console.log(modeSwitch)
     modeSwitch.addEventListener('change', function () {
         document.body.classList.toggle('dark-mode');
     });
