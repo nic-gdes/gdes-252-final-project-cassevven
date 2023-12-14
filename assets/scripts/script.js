@@ -39,10 +39,12 @@ function convert(conversionType) {
 }
 
 // dark mode and light mode switch button 
-document.addEventListener('DOMContentLoaded', function () {
-    const modeSwitch = document.getElementById('modeSwitch');
-    
+const modeSwitch = document.getElementById('modeSwitch');
+
+if (modeSwitch) {
+    console.log(modeSwitch)
     modeSwitch.addEventListener('change', function () {
         document.body.classList.toggle('dark-mode');
     });
-});
+}
+

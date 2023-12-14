@@ -440,6 +440,35 @@ grid-container-calc {
         max-width: 1600px;
         padding: 0;
     }
+
+    .dropdown-content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .dropdown {
+        display: flex;
+        flex-direction: row;
+        color: #F4E2D6;
+        padding: 20px;
+        gap: 25px;
+    }
+
+
+    .menu-icon {
+        display: none;
+    }
+   
+}
+
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #F4E2D6;
+    padding: 20px;
+    gap: 25px;
 }
 
 
